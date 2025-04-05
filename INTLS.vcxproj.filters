@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="JNI.cpp">
+      <Filter>JNI</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Hooks.cpp">
+      <Filter>Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="gui.cpp" />
+    <ClCompile Include="globals.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="JNI">
+      <UniqueIdentifier>{f274b45a-f36f-4652-b7d5-6cdff7659539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooks">
+      <UniqueIdentifier>{822896ce-c933-4fcf-8559-6c3938f296c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{6398f6f2-64e3-4690-bd07-d8161bb6ad8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\MinHook">
+      <UniqueIdentifier>{529dcf05-1d5f-4f97-8139-c41c0dff87a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JNI\Classes">
+      <UniqueIdentifier>{a471f941-378e-47db-b6f1-b2277b695270}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JNI.h">
+      <Filter>JNI</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks.h">
+      <Filter>Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="CRobot.h">
+      <Filter>JNI\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\Include\MinHook.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="CMinecraft.h">
+      <Filter>JNI\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="imgui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="gui.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="JNIMapper.h" />
+    <ClInclude Include="JNITypes.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+</Project>
