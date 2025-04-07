@@ -9,7 +9,8 @@
 
 The main window should look like this:
 
-![image](https://github.com/user-attachments/assets/66a69c90-52b0-474d-a0ba-280c836d687b)
+![image](https://github.com/user-attachments/assets/a6ff1327-126e-4486-ba73-18796734d829)
+
 
 After you enabled the modules it should output this in the console:
 
