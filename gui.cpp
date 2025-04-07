@@ -270,6 +270,8 @@ void gui::Render() noexcept
 		g_Globals.rcDelay = true;
 		printf("[+]RightClick delay will be 0!\n");
 	}
+	ImGui::InputInt("Auto Click Delay", &g_Globals.autoClickDelay);
+
 	
 	if (ImGui::Button("Set autoclicker to mouse side button"))
 	{

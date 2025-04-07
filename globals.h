@@ -8,7 +8,7 @@ class Globals final
 public:
 	bool rcDelay = false;
 	bool autoclick = false;
-	
+	int autoClickDelay = 40;
 
 	void CancelRightClickDelay()
 	{

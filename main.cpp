@@ -17,7 +17,7 @@ void MainThread(HMODULE module)
     p_jni = std::make_unique<JNI>();
     p_hooks = std::make_unique<Hooks>();
 
-    printf("INTLS loaded!\n");
+    printf("INTLS v0.4 loaded!\n");
     printf("To detach press PGUP\n");
 
     printf("[!]Set RightClick Delay to 0 will only work if you dont get an error saying: [Failed to get Minecraft class pointer!]\n");
@@ -54,7 +54,7 @@ void MainThread(HMODULE module)
                 p_jni->p_crobot->mousePress(16);
                 p_jni->p_crobot->mouseRelease(16);
                 
-                p_jni->p_crobot->delay(40 + (rand() % 20));
+                p_jni->p_crobot->delay(g_Globals.autoClickDelay + (rand() % 20));
                 
             }
             if (GetAsyncKeyState(VK_XBUTTON2))
@@ -62,7 +62,7 @@ void MainThread(HMODULE module)
                 p_jni->p_crobot->mousePress(4096);
                 p_jni->p_crobot->mouseRelease(4096);
                 
-                p_jni->p_crobot->delay(40 + (rand() % 20));
+                p_jni->p_crobot->delay(g_Globals.autoClickDelay + (rand() % 20));
 
             }
         }
