@@ -53,16 +53,16 @@ void MainThread(HMODULE module)
             {
                 p_jni->p_crobot->mousePress(16);
                 p_jni->p_crobot->mouseRelease(16);
-                p_jni->p_crobot->delay(1);
-                //p_jni->p_crobot->delay(40 + (rand() % 20));
+                
+                p_jni->p_crobot->delay(40 + (rand() % 20));
                 
             }
             if (GetAsyncKeyState(VK_XBUTTON2))
             {
                 p_jni->p_crobot->mousePress(4096);
                 p_jni->p_crobot->mouseRelease(4096);
-                p_jni->p_crobot->delay(1);
-                //p_jni->p_crobot->delay(40 + (rand() % 20));
+                
+                p_jni->p_crobot->delay(40 + (rand() % 20));
 
             }
         }
