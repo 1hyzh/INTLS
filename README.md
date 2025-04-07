@@ -5,6 +5,8 @@
 
 [Download Injector](https://github.com/1hyzh/INTLS_Injector/releases/tag/0.5)
 
+[Download Injector Installer](https://github.com/1hyzh/INTLS-Injector-Installer/releases/tag/1)
+
 The main window should look like this:
 
 ![image](https://github.com/user-attachments/assets/66a69c90-52b0-474d-a0ba-280c836d687b)
