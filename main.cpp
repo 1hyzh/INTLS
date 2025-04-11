@@ -54,7 +54,7 @@ void MainThread(HMODULE module)
                 p_jni->p_crobot->mousePress(16);
                 p_jni->p_crobot->mouseRelease(16);
                 
-                p_jni->p_crobot->delay(g_Globals.autoClickDelay + (rand() % 20));
+                p_jni->p_crobot->delay(g_Globals.autoClickDelay + g_Globals.autoClickRandomness);
                 
             }
             if (GetAsyncKeyState(VK_XBUTTON2))
@@ -62,7 +62,7 @@ void MainThread(HMODULE module)
                 p_jni->p_crobot->mousePress(4096);
                 p_jni->p_crobot->mouseRelease(4096);
                 
-                p_jni->p_crobot->delay(g_Globals.autoClickDelay + (rand() % 20));
+                p_jni->p_crobot->delay(g_Globals.autoClickDelay + g_Globals.autoClickRandomness);
 
             }
         }

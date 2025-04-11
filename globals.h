@@ -9,6 +9,7 @@ public:
 	bool rcDelay = false;
 	bool autoclick = false;
 	int autoClickDelay = 40;
+	int autoClickRandomness = 20;
 
 	void CancelRightClickDelay()
 	{
