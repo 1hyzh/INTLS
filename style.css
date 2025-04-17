@@ -1,0 +1,301 @@
+/* Make elements responsive to screen width */
+body {
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.card {
+    width: calc(100% - 32px); /* Adjust width to fit smaller screens */
+    margin: 16px; /* Add consistent margin */
+}
+
+.first_img_wrapper, .second_img_wrapper {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.IntroText, .InjText {
+    flex: 1 1 100%; /* Take full width on smaller screens */
+    margin: 16px 0; /* Add vertical spacing */
+}
+
+.image1, .image2 {
+    flex: 1 1 100%; /* Take full width on smaller screens */
+    margin: 16px 0; /* Add vertical spacing */
+}
+
+@media (min-width: 768px) {
+    .IntroText, .InjText {
+        flex: 1; /* Restore original behavior for larger screens */
+        margin: 32px; /* Restore original margin */
+    }
+
+    .image1, .image2 {
+        flex: 0; /* Restore original behavior for larger screens */
+        margin: 0; /* Restore original margin */
+    }
+}
+
+body {
+    background-color: #101214;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* NEW WRAPPER TO HANDLE THE SLIDE-UP ANIMATION */
+.card-wrapper {
+    animation: collapseSpacer 1.5s ease-in-out forwards;
+    margin-top: 100px; /* Initial space to slide from */
+}
+
+.card {
+    width: calc(100% - 128px);
+    height: 60px;
+    background-color: #191c1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(239, 235, 235, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    position: relative;
+    margin: 0 64px; /* Remove top margin; handled by wrapper */
+    transition: all 0.3s ease-in-out;
+    padding-left: 16px;
+}
+
+.card h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: left;
+    text-shadow: #fff 0px 0px 5px;
+    margin: 0;
+}
+
+.card a {
+    font-family: "Roboto", sans-serif;
+    background-color: #191c1f;
+    color: #fff;
+    padding: 8px 16px;
+    margin-left: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card a:hover {
+    background-color: #2a2e33;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.card::after,
+.card::before {
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(
+        from var(--angle),
+        #0040ff,
+        #7b00ff
+    );
+    z-index: -1;
+    padding: 3px;
+    animation: 3s spin linear infinite;
+}
+
+.card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+/* Replacing slideUp with collapseSpacer for the wrapper */
+@keyframes collapseSpacer {
+    0% {
+        margin-top: 100px;
+    }
+    100% {
+        margin-top: 8px;
+    }
+}
+
+.first_img_wrapper {
+    display: flex;
+    justify-content: space-between; /* Space between IntroText and image1 */
+    align-items: center; /* Align items vertically */
+    margin: 32px;
+}
+
+.IntroText {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: #fff 0px 0px 5px;
+    background-color: #191c1f;
+    padding: 4px;
+    border-radius: 8px;
+    margin: 32px;
+    outline: 2px solid transparent;
+    transition: outline 0.3s ease, box-shadow 0.3s ease;
+    outline-offset: 4px;
+    box-shadow: #7b00ff 0px 0px 16px;
+    flex: 1; /* Take up available space */
+    text-align: left; /* Align text to the left */
+    margin-right: 16px;
+}
+.IntroText:hover {
+    outline: 2px solid #0040ff;
+}
+
+.image1 {
+    flex: 0; /* Prevent it from stretching */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second_img_wrapper {
+    display: flex;
+    justify-content: space-between; /* Space between image2 and InjText */
+    align-items: center; /* Align items vertically */
+    margin: 32px; /* Add spacing around the wrapper */
+}
+
+.InjText {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: #fff 0px 0px 5px;
+    background-color: #191c1f;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 32px;
+    outline: 2px solid transparent;
+    transition: outline 0.3s ease, box-shadow 0.3s ease;
+    outline-offset: 4px;
+    box-shadow: #7b00ff 0px 0px 16px;
+    flex: 1; /* Take up available space */
+    text-align: left; /* Align text to the left */
+    margin-left: 16px; /* Add spacing between image2 and InjText */
+}
+.InjText:hover {
+    outline: 2px solid #0040ff;
+}
+
+.image2 {
+    flex: 0; /* Prevent it from stretching */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add animation for .image1 and .image2 outline */
+.image1, .image2 {
+    border-radius: 8px;
+    position: relative; /* Ensure pseudo-elements are positioned relative to the parent */
+}
+
+.image1::after, .image2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(
+        from var(--angle),
+        #00b4d8, /* Light blue */
+        #48cae4
+    );
+    z-index: -1;
+    padding: 3px;
+    animation: 3s spin linear infinite; /* Reuse the spin animation */
+}
+
+.image1::before, .image2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px; /* Optional: Adjust based on your design */
+    background-image: conic-gradient(
+        from var(--angle),
+        #00b4d8, /* Light blue */
+        #48cae4  /* Aqua */
+    );
+    z-index: -2;
+    filter: blur(1.5rem);
+    opacity: 0.5;
+    animation: 3s spin linear infinite; /* Reuse the spin animation */
+}
+
+.InjSource {
+    font-family: "Roboto", sans-serif;
+    background-color: #545d67;
+    color: #fff;
+    padding: 8px 16px;
+    margin-left: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(195, 187, 187, 0.2);
+}
+
+.InjSource:hover {
+    background-color: #2a2e33;
+}
+.InjDownload {
+    font-family: "Roboto", sans-serif;
+    background-color: #545d67;
+    color: #fff;
+    padding: 8px 16px;
+    margin-left: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(195, 187, 187, 0.2);
+}
+
+.InjDownload:hover {
+    background-color: #2a2e33;
+}
+
+.InjButtons {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    align-items: center; /* Align items vertically */
+    margin-top: 20px; /* Add spacing above the buttons */
+}
