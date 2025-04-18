@@ -110,7 +110,8 @@ body {
     background-image: conic-gradient(
         from var(--angle),
         #0040ff,
-        #7b00ff
+        #7b00ff,
+        #0040ff
     );
     z-index: -1;
     padding: 3px;
